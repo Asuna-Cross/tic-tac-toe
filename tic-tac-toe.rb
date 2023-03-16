@@ -118,8 +118,12 @@ def play(board)
 end
 
 display_board(board)
+turn(board)
 valid_move?(board, index)
 position_taken?(board, index)
 input_to_index(user_input)
 move(board, index, first_player = "X")
+
+
+
 
