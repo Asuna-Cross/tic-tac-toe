@@ -68,16 +68,13 @@ def turn(board)
 end
 
 def won?(board)
+   #Might need to redo this to meet own specs
    WIN_COMBINATIONS.each do |win_combination|
-     win_index_1 = win_combination[0]
-     win_index_2 = win_combination[1]
-     win_index_3 = win_combination[2]   
-     position_1 = board[win_index_1] # value of board at win_index_1
-     position_2 = board[win_index_2] # value of board at win_index_2
-     position_3 = board[win_index_3] # value of board at win_index_3   
-     position_1 == position_2 && position_2 == position_3 && position_taken?(board, win_index_1)
+      # Comparisons between the three integer
+      # Use current_player for it to make it easier
+      # If true, break and go to finish
    end
-end#position_1 == position_2 && position_2 == position_3 && position_taken?(board, win_index_1) 
+end
 
 def full?(board)
     board.all? {|i| i == "X" || i == "O"}
@@ -118,7 +115,7 @@ def play(board)
 end
 
 display_board(board)
-turn(board)
+play(board)
 
 
 
